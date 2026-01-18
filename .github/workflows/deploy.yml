@@ -43,7 +43,7 @@ jobs:
           TOOL_NAME: ${{ secrets.TOOL_NAME }}       
           HOST: login.toolforge.org
           # PATHS
-          DEST_STATIC: "/data/project/${{ secrets.TOOL_NAME }}/www/python/src/static"
+          DEST_STATIC: "/data/project/${{ secrets.TOOL_NAME }}/www/python/static"
           BACKEND_DIR: "/data/project/${{ secrets.TOOL_NAME }}/www/python/src"
         run: |
           echo "Starting Deployment to $TOOL_NAME..."
