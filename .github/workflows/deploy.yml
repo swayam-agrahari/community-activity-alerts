@@ -78,7 +78,7 @@ jobs:
               echo 'nm Updating static files...'
               mkdir -p $DEST_STATIC
               # Copy from your user home dir to the tool dir
-              cp -r /data/project/$SSH_USER/tmp_vue_build/* $DEST_STATIC/
+              cp -r /home/$SSH_USER/tmp_vue_build/* $DEST_STATIC/
 
               # 5. Restart the Webservice
               echo '🔄 Restarting Webservice...'
