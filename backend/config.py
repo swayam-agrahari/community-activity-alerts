@@ -6,6 +6,7 @@ import pymysql
 load_dotenv()
 
 ENV = os.getenv("ENV", "dev")
+DB_NAME = os.getenv("DB_NAME")
 
 def get_db_credentials():
     if ENV == "prod":
@@ -15,7 +16,7 @@ def get_db_credentials():
             "user": cfg["client"]["user"],
             "password": cfg["client"]["password"],
             "host": "tools.db.svc.wikimedia.cloud",
-            "database": "s56391__community_alerts", #Your toolforge db name
+            "database": DB_NAME, #Your toolforge db name
             "DB_TABLE": "edit_counts"
         }
     else:
